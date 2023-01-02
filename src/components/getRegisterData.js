@@ -24,7 +24,7 @@ let getRegistr = () => {
   async function postData(data) {
     loader.style.display = "flex";
 
-    await fetch("http://localhost:3000/register", {
+    await fetch("https://mongo-auth-api.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
