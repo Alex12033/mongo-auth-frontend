@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpack App</title>
+</head>
+
+<body>
+    <div class="loader z-50 h-full w-full absolute bg-black opacity-50 hidden items-center justify-center">
+        <svg class="w-20 h-20" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+            enable-background="new 0 0 100 100" xml:space="preserve">
+            <circle fill="none" stroke="#fff" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48" />
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="85" y2="50.5">
+                <animateTransform attributeName="transform" dur="2s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="49.5" y2="74">
+                <animateTransform attributeName="transform" dur="15s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+        </svg>
+    </div>
+
+    <div class="loader-register z-50 h-full w-full absolute bg-black opacity-50 hidden items-center justify-center">
+        <svg class="w-20 h-20" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+            enable-background="new 0 0 100 100" xml:space="preserve">
+            <circle fill="none" stroke="#fff" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48" />
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="85" y2="50.5">
+                <animateTransform attributeName="transform" dur="2s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="49.5" y2="74">
+                <animateTransform attributeName="transform" dur="15s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+        </svg>
+    </div>
+
+    <div
+        class="relative container-form flex items-center justify-center bg-bg-image h-screen w-screen bg-no-repeat bg-cover bg-center bg-fixed relative">
+
+        <div class="container-form-layout z-10 bg-white opacity-60 h-screen w-full filter absolute">
+        </div>
+
+        <form
+            class="form-authenticate transition duration-500 opacity-1 max-w-screen-sm rounded-md bg-gradient-to-t from-blue-500 to-purple-700 flex items-center flex-col z-20  w-3/4 xl:w-1/2  ">
+
+            <!-- Logo section -->
+            <div class="logo-form-container mt-10 flex flex-col items-center">
+                <svg class="bg-white rounded-full p-1 w-[80px] h-[80px]" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M18.014 11.421l-2.656-4.625.867-.498 2.656 4.625-.867.498zm3.298 1.579l-2.656-4.625.867-.498 2.656 4.625-.867.498zm-.209 1.598c-.509-1.504-2.306-2.497-3.806-1.91l-6.235-10.688-11.062 20h20.25c2.067 0 3.75-1.682 3.75-3.75 0-1.774-1.239-3.265-2.897-3.652zm-.853 5.402h-16.858l4.822-8.718 1.067 2.135 1.922-3.651 1.67 2.815 1.116-1.597 2.636 4.516c.875-1.781 3.328-.688 2.688 1.104 1.271-.5 2.687.224 2.687 1.646 0 .965-.785 1.75-1.75 1.75z" />
+                </svg>
+                <span class="uppercase text-white mt-2">Login in</span>
+            </div>
+
+            <!-- Username input -->
+            <div class=" group relative wraper-input-login mt-10 flex items-center flex-col space-x-3 w-4/5">
+                <svg class="absolute left-2 fill-white top-2 group-focus-within:animate-[focusRight_0.5s_ease-in-out_forwards]"
+                    xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2c3.032 0 5.5 2.467 5.5 5.5 0 1.458-.483 3.196-3.248 5.59 4.111 1.961 6.602 5.253 7.482 8.909h-19.486c.955-4.188 4.005-7.399 7.519-8.889-1.601-1.287-3.267-3.323-3.267-5.61 0-3.033 2.468-5.5 5.5-5.5zm0-2c-4.142 0-7.5 3.357-7.5 7.5 0 2.012.797 3.834 2.086 5.182-5.03 3.009-6.586 8.501-6.586 11.318h24c0-2.791-1.657-8.28-6.59-11.314 1.292-1.348 2.09-3.172 2.09-5.186 0-4.143-3.358-7.5-7.5-7.5z" />
+                </svg>
+                <input
+                    class="text-white placeholder-white w-full focus:outline-none focus:animate-[focusLeft_0.5s_ease-in-out_forwards] bg-transparent py-2 pl-12 border-b caret-white transition duration-1500"
+                    autocomplete="off" type="text" name="username" id="username-login-input" placeholder="Username"
+                    required />
+
+                <span
+                    class="absolute h-1 bg-white  bottom-0 rounded-full group-focus-within:animate-[borderAnimate_0.5s_ease-in-out_forwards]"></span>
+            </div>
+
+            <!-- Password input -->
+            <div
+                class="group relative wraper-input-password box-border mt-5 flex items-center flex-col space-x-3 w-4/5">
+                <svg class="absolute left-2 fill-white top-2 group-focus-within:animate-[focusRight_0.5s_ease-in-out_forwards]"
+                    width="23" height="23" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                    <path
+                        d="M10 17c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm3 0c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm3 0c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm2-7v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10-4c0-2.206 1.795-4 4-4s4 1.794 4 4v4h-8v-4zm11 16h-14v-10h14v10z" />
+                </svg>
+                <!--input with one border-->
+                <input
+                    class="password-login-input text-white placeholder-white w-full outline-none focus:animate-[focusLeft_0.5s_ease-in-out_forwards] bg-transparent py-2 pl-12 border-b transition duration-1500 focus:origin-top-right caret-white"
+                    required autocomplete="off" type="password" name="password" placeholder="Password" />
+
+                <span
+                    class="absolute h-1 bg-white  bottom-0 rounded-full group-focus-within:animate-[borderAnimate_0.5s_ease-in-out_forwards]"></span>
+
+                <div class="toggle-visibility absolute b-whitev top-2 right-0 z-20">
+                    <svg class="h-6 w-6 fill-white transition duration-500 hover:scale-150 active:scale-100"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm.002 3c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5z"
+                            fill-rule="nonzero" />
+                    </svg>
+                </div>
+            </div>
+
+            <div
+                class="container-login-form-btn mt-8 bg-white rounded-full transition duration-500 hover:bg-purple-700 hover:text-white scale-100 hover:scale-105 hover:shadow-md active:scale-100">
+                <button class="login-form-btn px-8 py-2">
+                    Login
+                </button>
+            </div>
+
+            <div class="redirect-to-register-btn my-8 opacity-50 hover:opacity-100 text-white cursor-pointer">
+
+                Not Registerd? Click here
+
+            </div>
+        </form>
+
+        <!-- Form registration -->
+        <form
+            class="form-registration transition duration-500 opacity-0 absolute inset-x-0 m-auto max-w-screen-sm rounded-md bg-gradient-to-t from-blue-500 to-purple-700 flex items-center flex-col w-3/4 xl:w-1/2  ">
+
+            <!-- Logo section -->
+            <div class="logo-form-container mt-10 flex flex-col items-center">
+                <svg class="bg-white rounded-full p-1 w-[80px] h-[80px]" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M18.014 11.421l-2.656-4.625.867-.498 2.656 4.625-.867.498zm3.298 1.579l-2.656-4.625.867-.498 2.656 4.625-.867.498zm-.209 1.598c-.509-1.504-2.306-2.497-3.806-1.91l-6.235-10.688-11.062 20h20.25c2.067 0 3.75-1.682 3.75-3.75 0-1.774-1.239-3.265-2.897-3.652zm-.853 5.402h-16.858l4.822-8.718 1.067 2.135 1.922-3.651 1.67 2.815 1.116-1.597 2.636 4.516c.875-1.781 3.328-.688 2.688 1.104 1.271-.5 2.687.224 2.687 1.646 0 .965-.785 1.75-1.75 1.75z" />
+                </svg>
+                <span class="uppercase text-white mt-2">Sign in</span>
+            </div>
+
+            <!-- Username input -->
+            <div class=" group relative wraper-input-login mt-10 flex items-center flex-col space-x-3 w-4/5">
+                <svg class="absolute left-2 fill-white top-2 group-focus-within:animate-[focusRight_0.5s_ease-in-out_forwards]"
+                    xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2c3.032 0 5.5 2.467 5.5 5.5 0 1.458-.483 3.196-3.248 5.59 4.111 1.961 6.602 5.253 7.482 8.909h-19.486c.955-4.188 4.005-7.399 7.519-8.889-1.601-1.287-3.267-3.323-3.267-5.61 0-3.033 2.468-5.5 5.5-5.5zm0-2c-4.142 0-7.5 3.357-7.5 7.5 0 2.012.797 3.834 2.086 5.182-5.03 3.009-6.586 8.501-6.586 11.318h24c0-2.791-1.657-8.28-6.59-11.314 1.292-1.348 2.09-3.172 2.09-5.186 0-4.143-3.358-7.5-7.5-7.5z" />
+                </svg>
+                <input
+                    class="text-white placeholder-white w-full focus:outline-none focus:animate-[focusLeft_0.5s_ease-in-out_forwards] bg-transparent py-2 pl-12 border-b caret-white transition duration-1500"
+                    required autocomplete="off" type="text" name="username" id="username-register-input" placeholder="Enter username" />
+
+                <span
+                    class="absolute h-1 bg-white  bottom-0 rounded-full group-focus-within:animate-[borderAnimate_0.5s_ease-in-out_forwards]"></span>
+            </div>
+
+            <!-- Password input -->
+            <div
+                class="group relative wraper-input-password box-border mt-5 flex items-center flex-col space-x-3 w-4/5">
+                <svg class="absolute left-2 fill-white top-2 group-focus-within:animate-[focusRight_0.5s_ease-in-out_forwards]"
+                    width="23" height="23" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                    <path
+                        d="M10 17c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm3 0c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm3 0c0 .552-.447 1-1 1s-1-.448-1-1 .447-1 1-1 1 .448 1 1zm2-7v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10-4c0-2.206 1.795-4 4-4s4 1.794 4 4v4h-8v-4zm11 16h-14v-10h14v10z" />
+                </svg>
+                <!--input with one bottom border-->
+                <input
+                    class="password-register-input text-white placeholder-white w-full outline-none focus:animate-[focusLeft_0.5s_ease-in-out_forwards] bg-transparent py-2 pl-12 border-b transition duration-1500 focus:origin-top-right caret-white"
+                    required autocomplete="off" type="password" name="password" placeholder="Enter password" />
+
+                <span
+                    class="absolute h-1 bg-white  bottom-0 rounded-full group-focus-within:animate-[borderAnimate_0.5s_ease-in-out_forwards]"></span>
+                <div class="toggle-visibility absolute b-whitev top-2 right-0 z-20">
+                    <svg class="h-6 w-6 fill-white transition duration-500 hover:scale-150 active:scale-100"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm.002 3c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5z"
+                            fill-rule="nonzero" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- email input -->
+            <div
+                class="group relative wraper-input-password box-border mt-5 flex items-center flex-col space-x-3 w-4/5">
+                <svg class="absolute left-2 fill-white top-2 group-focus-within:animate-[focusRight_0.5s_ease-in-out_forwards]"
+                    width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                    <path
+                        d="M.026 24l11.974-11.607 11.974 11.607h-23.948zm11.964-23.961l-11.99 8.725v12.476l7.352-7.127-5.653-4.113 10.291-7.488 10.309 7.488-5.655 4.108 7.356 7.132v-12.476l-12.01-8.725z" />
+                </svg>
+                <!--input with one border-->
+                <input
+                    class="email-register-input text-white placeholder-white w-full outline-none focus:animate-[focusLeft_0.5s_ease-in-out_forwards] bg-transparent py-2 pl-12 border-b transition duration-1500 focus:origin-top-right caret-white"
+                    required autocomplete="off" type="email" name="email" placeholder="Enter email" />
+
+                <span
+                    class="absolute h-1 bg-white  bottom-0 rounded-full group-focus-within:animate-[borderAnimate_0.5s_ease-in-out_forwards]"></span>
+            </div>
+
+            <div
+                class="container-register-form-btn mt-8 bg-white rounded-full transition duration-500 hover:bg-purple-700 hover:text-white scale-100 hover:scale-105 hover:shadow-md active:scale-100">
+                <button class="register-form-btn px-8 py-2">
+                    Login
+                </button>
+            </div>
+
+            <div class="redirect-to-login-btn my-8 opacity-50 hover:opacity-100 text-white cursor-pointer">
+
+                Already Registerd? Click here
+
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
