@@ -21,8 +21,8 @@ let getAuth = () => {
   async function postData(data) {
     loader.style.display = "flex";
 
-    //http://localhost:3001/isLogin
-    await fetch("https://mongo-auth-api.onrender.com/isLogin", {
+    await fetch("http://localhost:3001/isLogin", {
+    // await fetch("https://mongo-auth-api.onrender.com/isLogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,8 +35,6 @@ let getAuth = () => {
         }
 
         if (!res.ok) {
-          loader.style.display = "none";
-
           throw new Error("invalid query to database");
         }
 
@@ -55,6 +53,7 @@ let getAuth = () => {
         }
       })
       .catch((error) => {
+        loader.style.display = "none";
         alert(error);
       });
   }
