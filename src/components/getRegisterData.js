@@ -24,27 +24,35 @@ let getRegistr = () => {
   async function postData(data) {
     loader.style.display = "flex";
 
+    //http://localhost:3001/
     await fetch("https://mongo-auth-api.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.ok) {
-        console.log(res);
-        loader.style.display = "none";
-      }
+    })
+      .then((res) => {
+        if (res.ok === 200) {
+          console.log(res.ok);
+          loader.style.display = "none";
+          alert("you successfully registered");
+        }
 
-      if (!res.ok) {
-        console.log(res, "result");
-        loader.style.display = "none";
-      }
+        if (res.ok !== 200) {
+          console.log(res, "result");
+          loader.style.display = "none";
 
-      password.value = "";
-      username.value = "";
-      email.value = "";
-    });
+          throw new Error('Network response was not OK');
+        }
+
+        password.value = "";
+        username.value = "";
+        email.value = "";
+      })
+      .catch((error) => {
+        alert(`Sorry :( error in process registration ${error}`);
+      });
   }
 
   sendAuthBtn.addEventListener("click", (e) => {

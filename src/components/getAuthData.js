@@ -21,7 +21,8 @@ let getAuth = () => {
   async function postData(data) {
     loader.style.display = "flex";
 
-    await fetch("https://mongo-auth-api.onrender.com/isLogin", {
+    //https://mongo-auth-api.onrender.com
+    await fetch("http://localhost:3001/isLogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,6 +36,8 @@ let getAuth = () => {
 
         if (!res.ok) {
           loader.style.display = "none";
+
+          throw new Error("invalid query to database");
         }
 
         password.value = "";
@@ -44,10 +47,15 @@ let getAuth = () => {
       })
       .then((data) => {
         if (data.registered === true) {
-          alert(`${data.user.username} you successfully login`);
+          alert(`Hello ${data.user.username} ! You successfully login`);
         } else {
-          alert(`please register and after login`);
+          alert(
+            "Sorry :-( you NOT REGISTERED. Please go register and after login"
+          );
         }
+      })
+      .catch((error) => {
+        alert(error);
       });
   }
 
