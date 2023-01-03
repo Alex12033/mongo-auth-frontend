@@ -33,13 +33,13 @@ let getRegistr = () => {
       body: JSON.stringify(data),
     })
       .then((res) => {
-        if (res.ok === 200) {
+        if (res.ok) {
           console.log(res.ok);
           loader.style.display = "none";
           alert("you successfully registered");
         }
 
-        if (res.ok !== 200) {
+        if (!res.ok) {
           console.log(res, "result");
           loader.style.display = "none";
 
