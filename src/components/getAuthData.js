@@ -21,8 +21,8 @@ let getAuth = () => {
   async function postData(data) {
     loader.style.display = "flex";
 
-    await fetch("http://localhost:3001/isLogin", {
-    // await fetch("https://mongo-auth-api.onrender.com/isLogin", {
+    // await fetch("http://localhost:3001/isLogin", {
+    await fetch("https://mongo-auth-api.onrender.com/isLogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
